@@ -502,6 +502,15 @@ if (statsSection) {
   observer.observe(statsSection);
 }
 
+document.querySelectorAll(".stat-card--clickable").forEach((card) => {
+  const link = card.dataset.link;
+  if (!link) return;
+
+  card.addEventListener("click", () => {
+    window.open(link, "_blank");
+  });
+});
+
 // ==============================
 // Écran de chargement
 // ==============================
@@ -524,3 +533,4 @@ window.addEventListener("scroll", () => {
     parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
   }
 });
+
