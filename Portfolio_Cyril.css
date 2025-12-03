@@ -922,6 +922,10 @@ body::after {
   transition: all 0.3s ease;
 }
 
+.stat-card--clickable {
+  cursor: pointer;
+}
+
 .stat-card::before {
   content: "";
   position: absolute;
@@ -1675,3 +1679,4 @@ a.info-item {
     text-align: center;
   }
 }
+
